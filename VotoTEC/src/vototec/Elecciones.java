@@ -5,20 +5,37 @@
  */
 package vototec;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author J.F Ballestero
  */
 public class Elecciones {
-    private String tipo;
-    private String periodo;
-    private String duracionCampaña;
-    public Elecciones(){  
-    }
+    private String tipo, periodo, duracionCampaña;
+    ArrayList <Papeleta> papeleta = new ArrayList(); //ArrayList que almacena todas las papeletas
+    
+   //Constructor
     public Elecciones(String tipo, String periodo, String duracionCampaña) {
         this.tipo = tipo;
         this.periodo = periodo;
         this.duracionCampaña = duracionCampaña;
+    }
+    
+    
+    public void setPapeleta(Papeleta p) {
+        papeleta.add(p);
+    }
+
+    public ArrayList<Papeleta> getPapeleta() {
+        return this.papeleta;
+    }
+    
+    public void imprimirPapeletas(){ //Método para recorrer el ArrayList e imprimirlo
+        System.out.println("\n------Papeletas------\n");
+        for(int i = 0; i < this.getPapeleta().size(); i++){
+            System.out.println(this.getPapeleta().get(i).toString());
+        }
     }
 
     public String getTipo() {
@@ -47,7 +64,7 @@ public class Elecciones {
 
     @Override
     public String toString() {
-        return "Elecciones{" + "tipo=" + tipo + ", periodo=" + periodo + ", duracionCampa\u00f1a=" + duracionCampaña + '}';
+        return "Elección{" + "tipo=" + tipo + ", periodo=" + periodo + ", duracionCampa\u00f1a=" + duracionCampaña + '}';
     }
     
     

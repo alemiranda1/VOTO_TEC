@@ -5,17 +5,38 @@
  */
 package vototec;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author J.F Ballestero
+ * @author Alejandro
  */
 public class TSE {
+    
+    ArrayList <Elecciones> elecciones = new ArrayList(); //ArrayList que almacena todas las elecciones
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+
+    
+    public void setElecciones(Elecciones e) {
+        elecciones.add(e);
     }
+
+    public ArrayList<Elecciones> getElecciones() {
+        return this.elecciones;
+    }
+    
+    public void imprimirElecciones(){ //Método para recorrer el ArrayList e imprimirlo
+        System.out.println("\n------Elecciones " + "de Costa Rica------\n");
+        for(int i = 0; i < this.getElecciones().size(); i++){
+            System.out.println(this.getElecciones().get(i).toString());
+        }
+    }
+    
+
+
+    
+    
+    
+    
     
 }

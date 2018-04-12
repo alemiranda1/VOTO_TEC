@@ -5,6 +5,8 @@
  */
 package vototec;
 
+import java.awt.image.BufferedImage;
+
 /**
  *
  * @author J.F Ballestero
@@ -12,12 +14,16 @@ package vototec;
 public class Papeleta {
     private String identificador;
     private String tipo;
+    private BufferedImage diseñoPapeleta;
 
-    public Papeleta(String identificador, String tipo) {
+    //Constructor
+    public Papeleta(String identificador, String tipo, BufferedImage diseñoPapeleta) {
         this.identificador = identificador;
         this.tipo = tipo;
+        this.diseñoPapeleta = diseñoPapeleta;
     }
 
+    
     public String getIdentificador() {
         return identificador;
     }
@@ -33,6 +39,16 @@ public class Papeleta {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    public BufferedImage getDiseñoPapeleta() {
+        return diseñoPapeleta;
+    }
+
+    public void setDiseñoPapeleta(BufferedImage diseñoPapeleta) {
+        this.diseñoPapeleta = diseñoPapeleta;
+    }
+    
+    
 
     @Override
     public String toString() {
