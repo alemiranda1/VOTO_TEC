@@ -14,8 +14,6 @@ import java.util.ArrayList;
 public class TSE {
     
     ArrayList <Elecciones> elecciones = new ArrayList(); //ArrayList que almacena todas las elecciones
-
-
     
     public void setElecciones(Elecciones e) {
         elecciones.add(e);

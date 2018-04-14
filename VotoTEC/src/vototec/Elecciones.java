@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Elecciones {
     private String tipo, periodo, duracionCampaña;
     ArrayList <Papeleta> papeleta = new ArrayList(); //ArrayList que almacena todas las papeletas
+    private ArrayList<PartidoPolitico> partido = new ArrayList(); //ArrayList que almacena todos los partidos politicos
     
    //Constructor
     public Elecciones(String tipo, String periodo, String duracionCampaña) {
@@ -62,11 +63,18 @@ public class Elecciones {
         this.duracionCampaña = duracionCampaña;
     }
 
+    public ArrayList<PartidoPolitico> getPartido() {
+        return partido;
+    }
+
+    public void setPartido(PartidoPolitico p) {
+        this.partido.add(p);
+    }
+    
+
     @Override
     public String toString() {
         return "Elección{" + "tipo=" + tipo + ", periodo=" + periodo + ", duracionCampa\u00f1a=" + duracionCampaña + '}';
     }
-    
-    
-    
+
 }
