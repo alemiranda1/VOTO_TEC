@@ -5,6 +5,8 @@
  */
 package vototec;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author J.F Ballestero

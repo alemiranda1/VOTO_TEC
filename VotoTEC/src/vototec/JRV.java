@@ -16,7 +16,11 @@ public class JRV {
     private int candtidadElectores;
     private String direccion;
     private String locacion;
+    /*Listas de arreglo en las que se contienen las relaciones
+    */
     private ArrayList<MiembroDeMesa> miembro = new ArrayList();
+    private ArrayList<Distrito> distrito = new ArrayList();
+    private ArrayList<Localidad> localidad = new ArrayList();
 
     public JRV(String codigo, int candtidadElectores, String direccion, String locacion) {
         this.codigo = codigo;
@@ -65,6 +69,24 @@ public class JRV {
         this.miembro.add(m);
     }
 
+    public ArrayList<Distrito> getDistrito() {
+        return distrito;
+    }
+
+    public void setDistrito(Distrito d) {
+        this.distrito.add(d);
+    }
+
+    public ArrayList<Localidad> getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(Localidad l) {
+        this.localidad.add(l);
+    }
+
+    
+    
     @Override
     public String toString() {
         return "JRV{" + "codigo=" + codigo + ", candtidadElectores=" + candtidadElectores + ", direccion=" + direccion + ", locacion=" + locacion + ", miembro=" + miembro + '}';

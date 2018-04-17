@@ -5,13 +5,16 @@
  */
 package vototec;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author J.F Ballestero
  */
 public class Localidad {
-        private String codigo;
+    private String codigo;
     private String nombre;
+    private ArrayList<Consulado> consulado = new ArrayList();
 
     public Localidad(String codigo, String nombre) {
         this.codigo = codigo;
@@ -33,6 +36,16 @@ public class Localidad {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public ArrayList<Consulado> getConsulado() {
+        return consulado;
+    }
+
+    public void setConsulado(ArrayList<Consulado> consulado) {
+        this.consulado = consulado;
+    }
+    
+    
 
     @Override
     public String toString() {
